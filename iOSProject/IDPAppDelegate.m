@@ -26,8 +26,6 @@
     
     [window makeKeyAndVisible];
     
-    window.rootViewController.view.frame = CGRectMake(0, 0, 200, 200);    
-    
     return YES;
 }
 

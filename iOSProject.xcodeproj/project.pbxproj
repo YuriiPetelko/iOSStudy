@@ -20,6 +20,7 @@
 		D7E1E09A1B274251000DC582 /* IDPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1E0991B274251000DC582 /* IDPAppDelegate.m */; };
 		D7E1E09E1B274294000DC582 /* IDPLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1E09C1B274294000DC582 /* IDPLabelViewController.m */; };
 		D7E1E09F1B274294000DC582 /* IDPLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E1E09D1B274294000DC582 /* IDPLabelViewController.xib */; };
+		D7E1E0A21B274A76000DC582 /* IDPLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1E0A11B274A76000DC582 /* IDPLabelView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		D7E1E09B1B274294000DC582 /* IDPLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPLabelViewController.h; sourceTree = "<group>"; };
 		D7E1E09C1B274294000DC582 /* IDPLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPLabelViewController.m; sourceTree = "<group>"; };
 		D7E1E09D1B274294000DC582 /* IDPLabelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPLabelViewController.xib; sourceTree = "<group>"; };
+		D7E1E0A01B274A76000DC582 /* IDPLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPLabelView.h; sourceTree = "<group>"; };
+		D7E1E0A11B274A76000DC582 /* IDPLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPLabelView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 				D7E1E09B1B274294000DC582 /* IDPLabelViewController.h */,
 				D7E1E09C1B274294000DC582 /* IDPLabelViewController.m */,
 				D7E1E09D1B274294000DC582 /* IDPLabelViewController.xib */,
+				D7E1E0A01B274A76000DC582 /* IDPLabelView.h */,
+				D7E1E0A11B274A76000DC582 /* IDPLabelView.m */,
 			);
 			path = IDPLabelViewController;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E17BFD1B25FCAA009773BB /* main.m in Sources */,
+				D7E1E0A21B274A76000DC582 /* IDPLabelView.m in Sources */,
 				D7E1E09E1B274294000DC582 /* IDPLabelViewController.m in Sources */,
 				D7E1E09A1B274251000DC582 /* IDPAppDelegate.m in Sources */,
 			);

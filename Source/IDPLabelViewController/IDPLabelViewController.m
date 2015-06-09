@@ -8,26 +8,42 @@
 
 #import "IDPLabelViewController.h"
 
+#import "IDPLabelView.h"
+
 @interface IDPLabelViewController ()
+@property (nonatomic, readonly) IDPLabelView    *labelView;
 
 @end
 
 @implementation IDPLabelViewController
 
 #pragma mark -
+#pragma mark Accessors
+
+- (void)setData:(NSString *)data {
+    if (_data != data) {
+        _data = data;
+        
+        self.labelView.label.text = data;
+    }
+}
+
+- (IDPLabelView *)labelView {
+    if ([self isViewLoaded] && [self.view isKindOfClass:[IDPLabelView class]]) {
+        return (IDPLabelView *)self.view;
+    }
+    
+    return nil;
+}
+
+#pragma mark -
 #pragma mark View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    label.text = @"MAMAMA";
-    label.backgroundColor = [UIColor redColor];
-    
-    self.view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
-    self.view.opaque = NO;
-    
-    [self.view addSubview:label];
+
+    self.labelView.label.text = @"PAPA";
+//    [[(IDPLabelView *)[self view] label] setText:@"PAPA"];
 }
 
 - (void)didReceiveMemoryWarning {

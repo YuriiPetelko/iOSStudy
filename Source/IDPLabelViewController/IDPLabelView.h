@@ -1,5 +1,5 @@
 //
-//  IDPLabelViewController.h
+//  IDPLabelView.h
 //  iOSProject
 //
 //  Created by Oleksa Korin on 6/9/15.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IDPLabelViewController : UIViewController
-@property (nonatomic, strong)   NSString    *data;
-
+@interface IDPLabelView : UIView
+@property (nonatomic, strong)   IBOutlet UILabel     *label;
 
 @end
