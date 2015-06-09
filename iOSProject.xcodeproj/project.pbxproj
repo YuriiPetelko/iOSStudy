@@ -11,18 +11,15 @@
 		D7E17BFC1B25FCAA009773BB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7E17BFA1B25FCAA009773BB /* Info.plist */; };
 		D7E17BFD1B25FCAA009773BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17BFB1B25FCAA009773BB /* main.m */; };
 		D7E17C011B25FCB5009773BB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7E17BFF1B25FCB5009773BB /* Info.plist */; };
-		D7E17C0E1B25FCCA009773BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C051B25FCCA009773BB /* AppDelegate.m */; };
-		D7E17C0F1B25FCCA009773BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C051B25FCCA009773BB /* AppDelegate.m */; };
-		D7E17C101B25FCCA009773BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C071B25FCCA009773BB /* ViewController.m */; };
-		D7E17C111B25FCCA009773BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C071B25FCCA009773BB /* ViewController.m */; };
 		D7E17C121B25FCCA009773BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E17C091B25FCCA009773BB /* LaunchScreen.xib */; };
 		D7E17C131B25FCCA009773BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E17C091B25FCCA009773BB /* LaunchScreen.xib */; };
-		D7E17C141B25FCCA009773BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E17C0B1B25FCCA009773BB /* Main.storyboard */; };
-		D7E17C151B25FCCA009773BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E17C0B1B25FCCA009773BB /* Main.storyboard */; };
 		D7E17C161B25FCCA009773BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E17C0D1B25FCCA009773BB /* Images.xcassets */; };
 		D7E17C171B25FCCA009773BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E17C0D1B25FCCA009773BB /* Images.xcassets */; };
 		D7E17C1F1B25FDB1009773BB /* IDPARCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C1E1B25FDB1009773BB /* IDPARCObject.m */; };
 		D7E17C221B25FF3F009773BB /* IDPARCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C211B25FF3F009773BB /* IDPARCSpec.m */; };
+		D7E1E09A1B274251000DC582 /* IDPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1E0991B274251000DC582 /* IDPAppDelegate.m */; };
+		D7E1E09E1B274294000DC582 /* IDPLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1E09C1B274294000DC582 /* IDPLabelViewController.m */; };
+		D7E1E09F1B274294000DC582 /* IDPLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E1E09D1B274294000DC582 /* IDPLabelViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,16 +41,16 @@
 		D7E17BFA1B25FCAA009773BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7E17BFB1B25FCAA009773BB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7E17BFF1B25FCB5009773BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7E17C041B25FCCA009773BB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D7E17C051B25FCCA009773BB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D7E17C061B25FCCA009773BB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D7E17C071B25FCCA009773BB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D7E17C0A1B25FCCA009773BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D7E17C0C1B25FCCA009773BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7E17C0D1B25FCCA009773BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D7E17C1D1B25FDB1009773BB /* IDPARCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPARCObject.h; sourceTree = "<group>"; };
 		D7E17C1E1B25FDB1009773BB /* IDPARCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPARCObject.m; sourceTree = "<group>"; };
 		D7E17C211B25FF3F009773BB /* IDPARCSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPARCSpec.m; sourceTree = "<group>"; };
+		D7E1E0981B274251000DC582 /* IDPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPAppDelegate.h; sourceTree = "<group>"; };
+		D7E1E0991B274251000DC582 /* IDPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPAppDelegate.m; sourceTree = "<group>"; };
+		D7E1E09B1B274294000DC582 /* IDPLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPLabelViewController.h; sourceTree = "<group>"; };
+		D7E1E09C1B274294000DC582 /* IDPLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPLabelViewController.m; sourceTree = "<group>"; };
+		D7E1E09D1B274294000DC582 /* IDPLabelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPLabelViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +105,8 @@
 		D7E17BF91B25FCAA009773BB /* iOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				D7E1E0981B274251000DC582 /* IDPAppDelegate.h */,
+				D7E1E0991B274251000DC582 /* IDPAppDelegate.m */,
 				D7E17BFA1B25FCAA009773BB /* Info.plist */,
 				D7E17BFB1B25FCAA009773BB /* main.m */,
 			);
@@ -127,10 +126,7 @@
 		D7E17C031B25FCCA009773BB /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D7E17C041B25FCCA009773BB /* AppDelegate.h */,
-				D7E17C051B25FCCA009773BB /* AppDelegate.m */,
-				D7E17C061B25FCCA009773BB /* ViewController.h */,
-				D7E17C071B25FCCA009773BB /* ViewController.m */,
+				D7E1E0971B27424A000DC582 /* IDPLabelViewController */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -139,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				D7E17C091B25FCCA009773BB /* LaunchScreen.xib */,
-				D7E17C0B1B25FCCA009773BB /* Main.storyboard */,
 				D7E17C0D1B25FCCA009773BB /* Images.xcassets */,
 			);
 			path = Resources;
@@ -168,6 +163,16 @@
 				D7E17C211B25FF3F009773BB /* IDPARCSpec.m */,
 			);
 			path = IDPARCSpec;
+			sourceTree = "<group>";
+		};
+		D7E1E0971B27424A000DC582 /* IDPLabelViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7E1E09B1B274294000DC582 /* IDPLabelViewController.h */,
+				D7E1E09C1B274294000DC582 /* IDPLabelViewController.m */,
+				D7E1E09D1B274294000DC582 /* IDPLabelViewController.xib */,
+			);
+			path = IDPLabelViewController;
 			sourceTree = "<group>";
 		};
 		EE802584EC48D7EB0F244285 /* Pods */ = {
@@ -262,10 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E17C141B25FCCA009773BB /* Main.storyboard in Resources */,
 				D7E17C161B25FCCA009773BB /* Images.xcassets in Resources */,
 				D7E17C121B25FCCA009773BB /* LaunchScreen.xib in Resources */,
 				D7E17BFC1B25FCAA009773BB /* Info.plist in Resources */,
+				D7E1E09F1B274294000DC582 /* IDPLabelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E17C151B25FCCA009773BB /* Main.storyboard in Resources */,
 				D7E17C171B25FCCA009773BB /* Images.xcassets in Resources */,
 				D7E17C131B25FCCA009773BB /* LaunchScreen.xib in Resources */,
 				D7E17C011B25FCB5009773BB /* Info.plist in Resources */,
@@ -320,9 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E17C101B25FCCA009773BB /* ViewController.m in Sources */,
-				D7E17C0E1B25FCCA009773BB /* AppDelegate.m in Sources */,
 				D7E17BFD1B25FCAA009773BB /* main.m in Sources */,
+				D7E1E09E1B274294000DC582 /* IDPLabelViewController.m in Sources */,
+				D7E1E09A1B274251000DC582 /* IDPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,9 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E17C111B25FCCA009773BB /* ViewController.m in Sources */,
 				D7E17C221B25FF3F009773BB /* IDPARCSpec.m in Sources */,
-				D7E17C0F1B25FCCA009773BB /* AppDelegate.m in Sources */,
 				D7E17C1F1B25FDB1009773BB /* IDPARCObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,14 +356,6 @@
 				D7E17C0A1B25FCCA009773BB /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		D7E17C0B1B25FCCA009773BB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D7E17C0C1B25FCCA009773BB /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
