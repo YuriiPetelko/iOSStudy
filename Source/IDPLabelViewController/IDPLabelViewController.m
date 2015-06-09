@@ -23,9 +23,9 @@
 - (void)setData:(NSString *)data {
     if (_data != data) {
         _data = data;
-        
-        self.labelView.label.text = data;
     }
+    
+    self.labelView.label.text = data;    
 }
 
 - (IDPLabelView *)labelView {
@@ -41,9 +41,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.labelView.label.text = @"PAPA";
-//    [[(IDPLabelView *)[self view] label] setText:@"PAPA"];
+    
+    self.data = self.data;
 }
 
 - (void)didReceiveMemoryWarning {

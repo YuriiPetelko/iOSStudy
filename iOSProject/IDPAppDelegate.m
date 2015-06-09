@@ -21,7 +21,10 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = window;
     
-    window.rootViewController = [IDPLabelViewController new];
+    IDPLabelViewController *controller = [IDPLabelViewController new];
+    controller.data = @"MAMAPAPA";    
+    
+    window.rootViewController = controller;
     window.backgroundColor = [UIColor greenColor];
     
     [window makeKeyAndVisible];
