@@ -8,7 +8,8 @@
 
 #import "IDPAppDelegate.h"
 
-#import "IDPLabelViewController.h"
+#import "IDPUserViewController.h"
+#import "IDPUser.h"
 
 @interface IDPAppDelegate ()
 
@@ -21,8 +22,8 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = window;
     
-    IDPLabelViewController *controller = [IDPLabelViewController new];
-    controller.data = @"MAMAPAPA";    
+    IDPUserViewController *controller = [IDPUserViewController new];
+    controller.user = [IDPUser new];
     
     window.rootViewController = controller;
     window.backgroundColor = [UIColor greenColor];
