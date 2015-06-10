@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface IDPDraggableView : UIView
+@property (nonatomic, strong)   IBOutlet UIGestureRecognizer    *recognizer;
+
+- (IBAction)onPan:(UIPanGestureRecognizer *)sender;
 
 @end

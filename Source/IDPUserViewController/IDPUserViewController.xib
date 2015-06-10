@@ -36,6 +36,10 @@
                     <rect key="frame" x="80" y="204" width="160" height="160"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="recognizer" destination="G8b-N0-acG" id="Hky-ia-0Hc"/>
+                        <outletCollection property="gestureRecognizers" destination="G8b-N0-acG" appends="YES" id="Jih-JV-URD"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -46,6 +50,11 @@
             </connections>
             <point key="canvasLocation" x="513" y="312"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="G8b-N0-acG">
+            <connections>
+                <action selector="onPan:" destination="QtY-VY-bwA" id="r47-IL-uQf"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
