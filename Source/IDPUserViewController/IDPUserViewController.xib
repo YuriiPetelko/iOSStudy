@@ -34,7 +34,7 @@
                 </button>
                 <view contentMode="scaleToFill" id="QtY-VY-bwA" customClass="IDPDraggableView">
                     <rect key="frame" x="80" y="204" width="160" height="160"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
