@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  IDPAppDelegate.h
 //  iOSProject
 //
 //  Created by Oleksa Korin on 6/8/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface IDPAppDelegate : UIResponder <UIApplicationDelegate>
+@property (strong, nonatomic) UIWindow *window;
 
 @end
 
