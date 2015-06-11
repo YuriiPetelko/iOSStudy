@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IDPUsersViewController : UIViewController
+@class IDPUser;
+
+@interface IDPUsersViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong)   IDPUser     *user;
 
 @end

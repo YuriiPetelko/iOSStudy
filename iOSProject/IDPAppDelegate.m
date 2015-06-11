@@ -8,7 +8,7 @@
 
 #import "IDPAppDelegate.h"
 
-#import "IDPUserViewController.h"
+#import "IDPUsersViewController.h"
 #import "IDPUser.h"
 
 @interface IDPAppDelegate ()
@@ -22,7 +22,7 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = window;
     
-    IDPUserViewController *controller = [IDPUserViewController new];
+    IDPUsersViewController *controller = [IDPUsersViewController new];
     controller.user = [IDPUser new];
     
     window.rootViewController = controller;
