@@ -10,10 +10,9 @@
 
 #import "IDPUserView.h"
 
-@interface IDPUserViewController ()
-@property (nonatomic, readonly) IDPUserView    *userView;
+#import "IDPMacro.h"
 
-@end
+IDPViewControllerBaseViewProperty(IDPUserViewController, userView, IDPUserView)
 
 @implementation IDPUserViewController
 
@@ -26,14 +25,6 @@
     }
     
     self.userView.user = user;
-}
-
-- (IDPUserView *)userView {
-    if ([self isViewLoaded] && [self.view isKindOfClass:[IDPUserView class]]) {
-        return (IDPUserView *)self.view;
-    }
-    
-    return nil;
 }
 
 #pragma mark -
@@ -52,9 +43,5 @@
 
 #pragma mark -
 #pragma mark Interface Handling
-
-- (IBAction)onRotateButton:(id)sender {
-    [self.userView rotateLabel];
-}
 
 @end

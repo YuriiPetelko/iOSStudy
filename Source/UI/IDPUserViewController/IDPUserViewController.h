@@ -13,6 +13,4 @@
 @interface IDPUserViewController : UIViewController
 @property (nonatomic, strong)   IDPUser    *user;
 
-- (IBAction)onRotateButton:(id)sender;
-
 @end
