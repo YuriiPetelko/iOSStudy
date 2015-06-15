@@ -10,6 +10,7 @@
 
 #import "IDPUser.h"
 #import "IDPUsersView.h"
+#import "IDPUserCell.h"
 
 #import "IDPMacro.h"
 
@@ -26,16 +27,7 @@ IDPViewControllerBaseViewProperty(IDPUsersViewController, usersView, IDPUsersVie
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UITableView *tableView = self.usersView.tableView;
-    [tableView reloadData];
-    
-    [tableView addObserver:self forKeyPath:@"bounds" options:NSKeyValueObservingOptionNew context:NULL];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    CGRect bounds = self.usersView.tableView.bounds;
-
-    NSLog(@"%@", [NSValue valueWithCGRect:bounds]);
+    [self.usersView.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,15 +43,16 @@ IDPViewControllerBaseViewProperty(IDPUsersViewController, usersView, IDPUsersVie
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString * const kIDPCellName = @"kIDPCellName";
+    NSString *cellClass = NSStringFromClass([IDPUserCell class]);
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kIDPCellName];
+    IDPUserCell *cell = [tableView dequeueReusableCellWithIdentifier:cellClass];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:kIDPCellName];
+        UINib *nib = [UINib nibWithNibName:cellClass bundle:nil];
+        NSArray *cells = [nib instantiateWithOwner:nil options:nil];
+        cell = [cells firstObject];
     }
     
-    cell.textLabel.text = self.user.fullName;
+    cell.user = [IDPUser new];
     
     return cell;
 }

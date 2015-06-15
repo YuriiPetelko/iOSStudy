@@ -12,6 +12,9 @@
 
 @implementation IDPUser
 
+@dynamic fullName;
+@dynamic image;
+
 #pragma mark -
 #pragma mark Initializations and Deallocations
 
@@ -30,6 +33,12 @@
 
 - (NSString *)fullName {
     return [NSString stringWithFormat:@"%@ %@", self.name, self.surname];
+}
+
+- (UIImage *)image {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"image" ofType:@"jpg"];
+    
+    return [UIImage imageWithContentsOfFile:path];
 }
 
 @end
