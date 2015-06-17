@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		608F711B63A028D0EF193D65 /* libPods-iOSProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215A68B79D16D630EC172349 /* libPods-iOSProjectTests.a */; };
+		D768B0AE1B31F16E00C8698C /* IDPTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D768B0AD1B31F16E00C8698C /* IDPTestView.xib */; };
+		D768B0B11B31F1F100C8698C /* IDPTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = D768B0B01B31F1F100C8698C /* IDPTestView.m */; };
 		D7E0B83C1B29ED2F0046EDBA /* IDPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0B8321B29ED2F0046EDBA /* IDPUser.m */; };
 		D7E0B83D1B29ED2F0046EDBA /* IDPUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0B8361B29ED2F0046EDBA /* IDPUserView.m */; };
 		D7E0B83E1B29ED2F0046EDBA /* IDPUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0B8381B29ED2F0046EDBA /* IDPUserViewController.m */; };
@@ -26,6 +28,9 @@
 		D7E17C1F1B25FDB1009773BB /* IDPARCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C1E1B25FDB1009773BB /* IDPARCObject.m */; };
 		D7E17C221B25FF3F009773BB /* IDPARCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C211B25FF3F009773BB /* IDPARCSpec.m */; };
 		D7E1E09A1B274251000DC582 /* IDPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1E0991B274251000DC582 /* IDPAppDelegate.m */; };
+		D7E39A2B1B31E063005C269F /* IDPImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E39A2A1B31E063005C269F /* IDPImageView.m */; };
+		D7E39A351B31E524005C269F /* UIViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E39A331B31E524005C269F /* UIViewSpec.m */; };
+		D7E39A381B31E5C6005C269F /* IDPCompilerMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E39A371B31E5C6005C269F /* IDPCompilerMacro.m */; };
 		D7E488451B308ACF00DC9045 /* IDPImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E488441B308ACF00DC9045 /* IDPImageModel.m */; };
 		D7E488561B308DC700DC9045 /* IDPBlockObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E488481B308DC700DC9045 /* IDPBlockObservationController.m */; };
 		D7E488571B308DC700DC9045 /* IDPObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E4884A1B308DC700DC9045 /* IDPObservableObject.m */; };
@@ -51,6 +56,9 @@
 		215A68B79D16D630EC172349 /* libPods-iOSProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4663880D419D8234376BCC9E /* Pods-iOSProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectTests/Pods-iOSProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		C208A979779DDE06A581FFA2 /* Pods-iOSProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectTests/Pods-iOSProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D768B0AD1B31F16E00C8698C /* IDPTestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPTestView.xib; sourceTree = "<group>"; };
+		D768B0AF1B31F1F100C8698C /* IDPTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPTestView.h; sourceTree = "<group>"; };
+		D768B0B01B31F1F100C8698C /* IDPTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPTestView.m; sourceTree = "<group>"; };
 		D7E0B8311B29ED2F0046EDBA /* IDPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPUser.h; sourceTree = "<group>"; };
 		D7E0B8321B29ED2F0046EDBA /* IDPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPUser.m; sourceTree = "<group>"; };
 		D7E0B8351B29ED2F0046EDBA /* IDPUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPUserView.h; sourceTree = "<group>"; };
@@ -81,6 +89,11 @@
 		D7E17C211B25FF3F009773BB /* IDPARCSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPARCSpec.m; sourceTree = "<group>"; };
 		D7E1E0981B274251000DC582 /* IDPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPAppDelegate.h; sourceTree = "<group>"; };
 		D7E1E0991B274251000DC582 /* IDPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPAppDelegate.m; sourceTree = "<group>"; };
+		D7E39A291B31E063005C269F /* IDPImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPImageView.h; sourceTree = "<group>"; };
+		D7E39A2A1B31E063005C269F /* IDPImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPImageView.m; sourceTree = "<group>"; };
+		D7E39A331B31E524005C269F /* UIViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewSpec.m; sourceTree = "<group>"; };
+		D7E39A361B31E5C6005C269F /* IDPCompilerMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPCompilerMacro.h; sourceTree = "<group>"; };
+		D7E39A371B31E5C6005C269F /* IDPCompilerMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPCompilerMacro.m; sourceTree = "<group>"; };
 		D7E488431B308ACF00DC9045 /* IDPImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPImageModel.h; sourceTree = "<group>"; };
 		D7E488441B308ACF00DC9045 /* IDPImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPImageModel.m; sourceTree = "<group>"; };
 		D7E488471B308DC700DC9045 /* IDPBlockObservationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPBlockObservationController.h; sourceTree = "<group>"; };
@@ -159,6 +172,7 @@
 		D7E0B8331B29ED2F0046EDBA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D7E39A271B31E020005C269F /* Views */,
 				D7E0B8401B29EDD10046EDBA /* IDPUsersViewController */,
 				D7E0B8341B29ED2F0046EDBA /* IDPUserViewController */,
 			);
@@ -197,6 +211,8 @@
 				D7E0B84A1B29EEA60046EDBA /* Categories */,
 				D7E0B8531B29EFDB0046EDBA /* IDPMacro.h */,
 				D7E0B8561B29F0230046EDBA /* IDPMacro.m */,
+				D7E39A361B31E5C6005C269F /* IDPCompilerMacro.h */,
+				D7E39A371B31E5C6005C269F /* IDPCompilerMacro.m */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -276,6 +292,7 @@
 		D7E17C181B25FD3C009773BB /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				D7E39A311B31E524005C269F /* UIViewSpec */,
 				D7E17C201B25FF3F009773BB /* IDPARCSpec */,
 			);
 			path = Specs;
@@ -296,6 +313,34 @@
 				D7E17C211B25FF3F009773BB /* IDPARCSpec.m */,
 			);
 			path = IDPARCSpec;
+			sourceTree = "<group>";
+		};
+		D7E39A271B31E020005C269F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7E39A281B31E020005C269F /* IDPImageView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7E39A281B31E020005C269F /* IDPImageView */ = {
+			isa = PBXGroup;
+			children = (
+				D7E39A291B31E063005C269F /* IDPImageView.h */,
+				D7E39A2A1B31E063005C269F /* IDPImageView.m */,
+			);
+			path = IDPImageView;
+			sourceTree = "<group>";
+		};
+		D7E39A311B31E524005C269F /* UIViewSpec */ = {
+			isa = PBXGroup;
+			children = (
+				D768B0AD1B31F16E00C8698C /* IDPTestView.xib */,
+				D7E39A331B31E524005C269F /* UIViewSpec.m */,
+				D768B0AF1B31F1F100C8698C /* IDPTestView.h */,
+				D768B0B01B31F1F100C8698C /* IDPTestView.m */,
+			);
+			path = UIViewSpec;
 			sourceTree = "<group>";
 		};
 		D7E488421B308ACF00DC9045 /* IDPImageModel */ = {
@@ -483,6 +528,7 @@
 			files = (
 				D7E17C171B25FCCA009773BB /* Images.xcassets in Resources */,
 				D7E17C131B25FCCA009773BB /* LaunchScreen.xib in Resources */,
+				D768B0AE1B31F16E00C8698C /* IDPTestView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +582,7 @@
 				D7E488571B308DC700DC9045 /* IDPObservableObject.m in Sources */,
 				D7E0B83D1B29ED2F0046EDBA /* IDPUserView.m in Sources */,
 				D7E6A2EC1B2F37B8002E5407 /* IDPUserCell.m in Sources */,
+				D7E39A2B1B31E063005C269F /* IDPImageView.m in Sources */,
 				D7E0B8501B29EEA60046EDBA /* NSString+IDPExtensions.m in Sources */,
 				D7E0B83E1B29ED2F0046EDBA /* IDPUserViewController.m in Sources */,
 				D7E0B83C1B29ED2F0046EDBA /* IDPUser.m in Sources */,
@@ -552,6 +599,9 @@
 			files = (
 				D7E17C221B25FF3F009773BB /* IDPARCSpec.m in Sources */,
 				D7E17C1F1B25FDB1009773BB /* IDPARCObject.m in Sources */,
+				D7E39A381B31E5C6005C269F /* IDPCompilerMacro.m in Sources */,
+				D7E39A351B31E524005C269F /* UIViewSpec.m in Sources */,
+				D768B0B11B31F1F100C8698C /* IDPTestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

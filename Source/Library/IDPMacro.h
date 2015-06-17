@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Oleksa Korin. All rights reserved.
 //
 
+#import "IDPCompilerMacro.h"
+
 #define IDPDefineBaseViewProperty(propertyName, viewClass) \
     @property (nonatomic, readonly) viewClass   *propertyName;
 
@@ -36,11 +38,11 @@
     __weak __typeof(variable) __IDPWeakified_##variable = variable
 
 // you should only call this method after you called weakify for that same variable
+
 #define IDPStrongify(variable) \
-    _Pragma("clang diagnostic push"); \
-    _Pragma("clang diagnostic ignored \"-Wshadow\""); \
+    IDPClangDiagnosticPushExpression("clang diagnostic ignored \"-Wshadow\"") \
     __strong __typeof(variable) variable = __IDPWeakified_##variable \
-    _Pragma("clang diagnostic pop");
+    IDPClangDiagnosticPopExpression
 
 #define IDPEmptyResult
 
