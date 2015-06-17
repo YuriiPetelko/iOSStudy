@@ -31,3 +31,27 @@
     IDPBaseViewGetterSynthesize(propertyName, baseViewClass) \
     \
     @end
+
+#define IDPWeakify(variable) \
+    __weak __typeof(variable) __IDPWeakified_##variable = variable
+
+// you should only call this method after you called weakify for that same variable
+#define IDPStrongify(variable) \
+    _Pragma("clang diagnostic push"); \
+    _Pragma("clang diagnostic ignored \"-Wshadow\""); \
+    __strong __typeof(variable) variable = __IDPWeakified_##variable \
+    _Pragma("clang diagnostic pop");
+
+#define IDPEmptyResult
+
+#define IDPStrongifyAndReturnIfNil(variable) \
+    IDPStrongifyAndReturnResultIfNil(variable, IDPEmptyResult)
+
+#define IDPStrongifyAndReturnNilIfNil(variable) \
+    IDPStrongifyAndReturnResultIfNil(variable, nil)
+
+#define IDPStrongifyAndReturnResultIfNil(variable, result) \
+    IDPStrongify(variable); \
+    if (!variable) { \
+        return result; \
+    }

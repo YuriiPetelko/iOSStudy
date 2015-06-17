@@ -10,6 +10,8 @@
 
 #import "IDPImageModelDispatcher.h"
 
+#import "IDPMacro.h"
+
 @interface IDPImageModel ()
 @property (nonatomic, strong)       UIImage     *image;
 @property (nonatomic, strong)       NSURL       *url;
@@ -90,17 +92,17 @@
 #pragma mark Private
 
 - (NSOperation *)imageLoadingOperation {
-    __weak IDPImageModel *weakSelf = self;
+    IDPWeakify(self);
     
     NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
-        __strong IDPImageModel *strongSelf = weakSelf;
-        strongSelf.image = [UIImage imageWithContentsOfFile:[strongSelf.url absoluteString]];
+        IDPStrongifyAndReturnIfNil(self);
+        self.image = [UIImage imageWithContentsOfFile:[self.url absoluteString]];
     }];
     
     operation.completionBlock = ^{
-        __strong IDPImageModel *strongSelf = weakSelf;
-        @synchronized (strongSelf) {
-            strongSelf.state = strongSelf.image ? IDPImageModelLoaded : IDPImageModelFailedLoading;
+        IDPStrongify(self);
+        @synchronized (self) {
+            self.state = self.image ? IDPImageModelLoaded : IDPImageModelFailedLoading;
         }
     };
     
