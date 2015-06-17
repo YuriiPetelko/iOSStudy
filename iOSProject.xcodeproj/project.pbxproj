@@ -26,6 +26,11 @@
 		D7E17C1F1B25FDB1009773BB /* IDPARCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C1E1B25FDB1009773BB /* IDPARCObject.m */; };
 		D7E17C221B25FF3F009773BB /* IDPARCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E17C211B25FF3F009773BB /* IDPARCSpec.m */; };
 		D7E1E09A1B274251000DC582 /* IDPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1E0991B274251000DC582 /* IDPAppDelegate.m */; };
+		D7E488451B308ACF00DC9045 /* IDPImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E488441B308ACF00DC9045 /* IDPImageModel.m */; };
+		D7E488561B308DC700DC9045 /* IDPBlockObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E488481B308DC700DC9045 /* IDPBlockObservationController.m */; };
+		D7E488571B308DC700DC9045 /* IDPObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E4884A1B308DC700DC9045 /* IDPObservableObject.m */; };
+		D7E488581B308DC700DC9045 /* IDPObservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E4884C1B308DC700DC9045 /* IDPObservationController.m */; };
+		D7E4885F1B30993400DC9045 /* IDPImageModelDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E4885E1B30993400DC9045 /* IDPImageModelDispatcher.m */; };
 		D7E6A2E81B2F35C9002E5407 /* IDPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6A2E71B2F35C9002E5407 /* IDPTableViewCell.m */; };
 		D7E6A2EC1B2F37B8002E5407 /* IDPUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6A2EB1B2F37B8002E5407 /* IDPUserCell.m */; };
 		D7E6A2EE1B2F37DA002E5407 /* IDPUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E6A2ED1B2F37DA002E5407 /* IDPUserCell.xib */; };
@@ -76,6 +81,18 @@
 		D7E17C211B25FF3F009773BB /* IDPARCSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPARCSpec.m; sourceTree = "<group>"; };
 		D7E1E0981B274251000DC582 /* IDPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPAppDelegate.h; sourceTree = "<group>"; };
 		D7E1E0991B274251000DC582 /* IDPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPAppDelegate.m; sourceTree = "<group>"; };
+		D7E488431B308ACF00DC9045 /* IDPImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPImageModel.h; sourceTree = "<group>"; };
+		D7E488441B308ACF00DC9045 /* IDPImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPImageModel.m; sourceTree = "<group>"; };
+		D7E488471B308DC700DC9045 /* IDPBlockObservationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPBlockObservationController.h; sourceTree = "<group>"; };
+		D7E488481B308DC700DC9045 /* IDPBlockObservationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPBlockObservationController.m; sourceTree = "<group>"; };
+		D7E488491B308DC700DC9045 /* IDPObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPObservableObject.h; sourceTree = "<group>"; };
+		D7E4884A1B308DC700DC9045 /* IDPObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPObservableObject.m; sourceTree = "<group>"; };
+		D7E4884B1B308DC700DC9045 /* IDPObservationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPObservationController.h; sourceTree = "<group>"; };
+		D7E4884C1B308DC700DC9045 /* IDPObservationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPObservationController.m; sourceTree = "<group>"; };
+		D7E488541B308DC700DC9045 /* IDPObservableObject+IDPPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDPObservableObject+IDPPrivate.h"; sourceTree = "<group>"; };
+		D7E488551B308DC700DC9045 /* IDPObservationController+IDPPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDPObservationController+IDPPrivate.h"; sourceTree = "<group>"; };
+		D7E4885D1B30993400DC9045 /* IDPImageModelDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPImageModelDispatcher.h; sourceTree = "<group>"; };
+		D7E4885E1B30993400DC9045 /* IDPImageModelDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPImageModelDispatcher.m; sourceTree = "<group>"; };
 		D7E6A2E61B2F35C9002E5407 /* IDPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPTableViewCell.h; sourceTree = "<group>"; };
 		D7E6A2E71B2F35C9002E5407 /* IDPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPTableViewCell.m; sourceTree = "<group>"; };
 		D7E6A2EA1B2F37B8002E5407 /* IDPUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPUserCell.h; sourceTree = "<group>"; };
@@ -124,6 +141,7 @@
 		D7E0B82F1B29ED2F0046EDBA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D7E488421B308ACF00DC9045 /* IDPImageModel */,
 				D7E0B8301B29ED2F0046EDBA /* IDPUser */,
 			);
 			path = Models;
@@ -280,9 +298,52 @@
 			path = IDPARCSpec;
 			sourceTree = "<group>";
 		};
+		D7E488421B308ACF00DC9045 /* IDPImageModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7E4885C1B30991800DC9045 /* Private */,
+				D7E488431B308ACF00DC9045 /* IDPImageModel.h */,
+				D7E488441B308ACF00DC9045 /* IDPImageModel.m */,
+			);
+			path = IDPImageModel;
+			sourceTree = "<group>";
+		};
+		D7E488461B308DC700DC9045 /* IDPObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				D7E488471B308DC700DC9045 /* IDPBlockObservationController.h */,
+				D7E488481B308DC700DC9045 /* IDPBlockObservationController.m */,
+				D7E488491B308DC700DC9045 /* IDPObservableObject.h */,
+				D7E4884A1B308DC700DC9045 /* IDPObservableObject.m */,
+				D7E4884B1B308DC700DC9045 /* IDPObservationController.h */,
+				D7E4884C1B308DC700DC9045 /* IDPObservationController.m */,
+				D7E488531B308DC700DC9045 /* Private */,
+			);
+			path = IDPObservableObject;
+			sourceTree = "<group>";
+		};
+		D7E488531B308DC700DC9045 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				D7E488541B308DC700DC9045 /* IDPObservableObject+IDPPrivate.h */,
+				D7E488551B308DC700DC9045 /* IDPObservationController+IDPPrivate.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		D7E4885C1B30991800DC9045 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				D7E4885D1B30993400DC9045 /* IDPImageModelDispatcher.h */,
+				D7E4885E1B30993400DC9045 /* IDPImageModelDispatcher.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
 		D7E6A2E41B2F34CF002E5407 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D7E488461B308DC700DC9045 /* IDPObservableObject */,
 				D7E6A2E51B2F358C002E5407 /* IDPTableViewCell */,
 			);
 			path = Classes;
@@ -465,9 +526,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E4885F1B30993400DC9045 /* IDPImageModelDispatcher.m in Sources */,
+				D7E488561B308DC700DC9045 /* IDPBlockObservationController.m in Sources */,
 				D7E0B8511B29EEA60046EDBA /* NSString+IDPRandomName.m in Sources */,
+				D7E488581B308DC700DC9045 /* IDPObservationController.m in Sources */,
+				D7E488451B308ACF00DC9045 /* IDPImageModel.m in Sources */,
 				D7E0B8441B29EDF60046EDBA /* IDPUsersViewController.m in Sources */,
 				D7E0B8571B29F0230046EDBA /* IDPMacro.m in Sources */,
+				D7E488571B308DC700DC9045 /* IDPObservableObject.m in Sources */,
 				D7E0B83D1B29ED2F0046EDBA /* IDPUserView.m in Sources */,
 				D7E6A2EC1B2F37B8002E5407 /* IDPUserCell.m in Sources */,
 				D7E0B8501B29EEA60046EDBA /* NSString+IDPExtensions.m in Sources */,
