@@ -10,6 +10,8 @@
 
 #import "IDPUser.h"
 
+#import "IDPImageView.h"
+
 @implementation IDPUserCell
 
 #pragma mark -
@@ -54,7 +56,7 @@
     dispatch_async(queue, ^{
         UIImage *image = user.image;
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.userImageView.image = image;
+            self.userImageView.contentImageView.image = image;
         });
     });
 }

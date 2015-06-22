@@ -11,7 +11,8 @@
 #import "IDPImageModel.h"
 
 @interface IDPImageView ()
-@property (nonatomic, strong)   UIImageView     *imageView;
+
+- (void)initSubviews;
 
 @end
 
@@ -21,32 +22,55 @@
 #pragma mark Initializations and Deallocations
 
 - (void)dealloc {
-    
+    self.contentImageView = nil;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        [self addSubview:self.imageView];
+        [self initSubviews];
     }
     
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    self = [super initWithCoder:coder];
-    if (self) {
-        self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        [self addSubview:self.imageView];        
-    }
+- (void)awakeFromNib {
+    [super awakeFromNib];
     
-    return self;
+    if (!self.contentImageView) {
+        [self initSubviews];
+    }
+}
+
+#pragma mark -
+#pragma mark Accessors
+
+- (void)setContentImageView:(UIImageView *)contentImageView {
+    if (contentImageView != _contentImageView) {
+        [_contentImageView removeFromSuperview];
+        _contentImageView = contentImageView;
+        [self addSubview:contentImageView];
+    }
 }
 
 #pragma mark -
 #pragma mark View Lifecycle
 
 
+
+#pragma mark -
+#pragma mark Private
+
+- (void)initSubviews {
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin
+                                    | UIViewAutoresizingFlexibleWidth
+                                    | UIViewAutoresizingFlexibleRightMargin
+                                    | UIViewAutoresizingFlexibleTopMargin
+                                    | UIViewAutoresizingFlexibleHeight
+                                    | UIViewAutoresizingFlexibleBottomMargin;
+    
+    self.contentImageView = imageView;
+}
 
 @end
