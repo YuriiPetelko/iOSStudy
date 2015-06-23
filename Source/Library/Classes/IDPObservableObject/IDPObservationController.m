@@ -15,8 +15,8 @@ static NSString * const kIDPObservationControllerAllocationException    = @"IDPO
                                                 @"instantiated directly.";
 
 @interface IDPObservationController ()
-@property (nonatomic, assign) id                      observer;
-@property (nonatomic, assign) IDPObservableObject     *observableObject;
+@property (nonatomic, assign) id    observer;
+@property (nonatomic, assign) id    observableObject;
 
 @end
 

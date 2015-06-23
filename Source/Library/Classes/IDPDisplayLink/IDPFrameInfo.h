@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface IDPFrameInfo : NSObject
+@property (nonatomic, readonly) NSTimeInterval  duration;
+@property (nonatomic, readonly) CFTimeInterval  timeStamp;
+
+- (instancetype)initWithDuration:(NSTimeInterval)duration
+                       timeStamp:(CFTimeInterval)timeStamp;
 
 @end

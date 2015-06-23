@@ -6,8 +6,23 @@
 //  Copyright (c) 2015 Oleksa Korin. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "IDPObservableObject.h"
 
-@interface IDPDisplayLink : NSObject
+@class CADisplayLink;
+
+typedef NS_ENUM(NSUInteger, IDPDisplayLinkState) {
+    IDPDisplayLinkFrameRefresh
+};
+
+@interface IDPDisplayLink : IDPObservableObject
+@property (nonatomic, readonly) NSUInteger  frameInterval;
+
++ (instancetype)sharedDisplayLink;
+
+- (instancetype)initWithFrameInterval:(NSUInteger)frameInterval;
+
+// this method is intended for subclassing only
+// never call it directly
+- (void)onDisplayLink:(CADisplayLink *)link;
 
 @end

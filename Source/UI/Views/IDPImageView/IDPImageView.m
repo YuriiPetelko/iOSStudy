@@ -9,8 +9,12 @@
 #import "IDPImageView.h"
 
 #import "IDPImageModel.h"
+#import "IDPBlockObservationController.h"
+
+#import "IDPMacro.h"
 
 @interface IDPImageView ()
+@property (nonatomic, strong)   IDPBlockObservationController   *observer;
 
 - (void)initSubviews;
 
@@ -42,6 +46,18 @@
     }
 }
 
+- (void)initSubviews {
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin
+                                    | UIViewAutoresizingFlexibleWidth
+                                    | UIViewAutoresizingFlexibleRightMargin
+                                    | UIViewAutoresizingFlexibleTopMargin
+                                    | UIViewAutoresizingFlexibleHeight
+                                    | UIViewAutoresizingFlexibleBottomMargin;
+    
+    self.contentImageView = imageView;
+}
+
 #pragma mark -
 #pragma mark Accessors
 
@@ -53,6 +69,24 @@
     }
 }
 
+- (void)setImageModel:(IDPImageModel *)imageModel {
+    if (_imageModel != imageModel) {
+        [_imageModel dump];
+        _imageModel = imageModel;
+        
+        self.observer = [imageModel blockObservationControllerWithObserver:self];
+        [imageModel load];
+    }
+}
+
+- (void)setObserver:(IDPBlockObservationController *)observer {
+    if (observer != _observer) {
+        _observer = observer;
+        
+        [self prepareObserver:observer];
+    }
+}
+
 #pragma mark -
 #pragma mark View Lifecycle
 
@@ -61,16 +95,34 @@
 #pragma mark -
 #pragma mark Private
 
-- (void)initSubviews {
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
-    imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin
-                                    | UIViewAutoresizingFlexibleWidth
-                                    | UIViewAutoresizingFlexibleRightMargin
-                                    | UIViewAutoresizingFlexibleTopMargin
-                                    | UIViewAutoresizingFlexibleHeight
-                                    | UIViewAutoresizingFlexibleBottomMargin;
+- (void)prepareObserver:(IDPBlockObservationController *)observer {
+    IDPWeakify(self);
+    id handler = ^(IDPBlockObservationController *controller, id userInfo) {
+        void(^block)(void) = ^{
+            IDPStrongifyAndReturnIfNil(self);
+            
+            IDPImageModel *model = controller.observableObject;
+            self.contentImageView.image = model.image;
+        };
+        
+        if ([NSThread isMainThread]) {
+            block();
+        } else {
+            dispatch_sync(dispatch_get_main_queue(), block);
+        }
+    };
     
-    self.contentImageView = imageView;
+    [observer setHandler:handler forState:IDPImageModelLoaded];
+    [observer setHandler:handler forState:IDPImageModelUnloaded];
+    
+    
+    handler = ^(IDPBlockObservationController *controller, id userInfo) {
+        IDPStrongifyAndReturnIfNil(self);
+        
+        [self.imageModel load];
+    };
+    
+    [observer setHandler:handler forState:IDPImageModelFailedLoading];
 }
 
 @end

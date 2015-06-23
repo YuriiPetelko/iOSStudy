@@ -68,6 +68,7 @@
 - (void)load {
     @synchronized (self) {
         if (IDPImageModelLoading == self.state) {
+            [self notifyOfStateChange:IDPImageModelLoading];
             return;
         }
         
@@ -96,7 +97,8 @@
     
     NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
         IDPStrongifyAndReturnIfNil(self);
-        self.image = [UIImage imageWithContentsOfFile:[self.url absoluteString]];
+        self.image = [UIImage imageWithContentsOfFile:[self.url path]];
+        NSLog(@"");
     }];
     
     operation.completionBlock = ^{

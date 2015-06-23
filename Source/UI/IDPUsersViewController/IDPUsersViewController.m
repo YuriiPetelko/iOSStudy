@@ -57,4 +57,14 @@ IDPViewControllerBaseViewProperty(IDPUsersViewController, usersView, IDPUsersVie
     return cell;
 }
 
+#pragma mark -
+#pragma mark UITableViewDelegate
+
+- (void)    tableView:(UITableView *)tableView
+ didEndDisplayingCell:(IDPUserCell *)cell
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.user = nil;
+}
+
 @end

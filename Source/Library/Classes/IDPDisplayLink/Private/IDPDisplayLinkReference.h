@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class IDPDisplayLink;
+@class CADisplayLink;
+
 @interface IDPDisplayLinkReference : NSObject
+@property (nonatomic, weak, readonly) IDPDisplayLink  *displayLink;
+
+- (instancetype)initWithDisplayLink:(IDPDisplayLink *)displayLink;
+
+- (void)onDisplayLink:(CADisplayLink *)link;
 
 @end

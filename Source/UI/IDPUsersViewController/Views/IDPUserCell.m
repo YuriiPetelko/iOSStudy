@@ -46,19 +46,7 @@
 
 - (void)fillWithModel:(IDPUser *)user {
     self.fullNameLabel.text = user.fullName;
-    
-    static dispatch_once_t onceToken;
-    static dispatch_queue_t queue = nil;
-    dispatch_once(&onceToken, ^{
-        queue = dispatch_queue_create("mama", DISPATCH_QUEUE_SERIAL);
-    });
-    
-    dispatch_async(queue, ^{
-        UIImage *image = user.image;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.userImageView.contentImageView.image = image;
-        });
-    });
+    self.userImageView.imageModel = user.imageModel;
 }
 
 @end

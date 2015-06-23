@@ -11,8 +11,8 @@
 #import "IDPObservableObject.h"
 
 @interface IDPObservationController : NSObject
-@property (nonatomic, readonly) id                      observer;
-@property (nonatomic, readonly) IDPObservableObject     *observableObject;
+@property (nonatomic, readonly) id      observer;
+@property (nonatomic, readonly) id      observableObject;
 
 @property (nonatomic, readonly, getter=isValid) BOOL    valid;
 
