@@ -75,7 +75,16 @@
         _imageModel = imageModel;
         
         self.observer = [imageModel blockObservationControllerWithObserver:self];
-        [imageModel load];
+        
+        IDPWeakify(self);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)),
+                       dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0),
+                       ^{
+                           IDPStrongifyAndReturnIfNil(self);
+                           if (self.imageModel == imageModel) {
+                               [imageModel load];
+                           }
+                       });
     }
 }
 
