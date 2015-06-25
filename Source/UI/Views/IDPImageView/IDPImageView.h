@@ -15,4 +15,8 @@
 
 @property (nonatomic, strong)   IDPImageModel   *imageModel;
 
+// this methods are used for subclassing purposes only
+// you should never call them directly
+- (void)modelDidLoad:(IDPImageModel *)model;
+
 @end

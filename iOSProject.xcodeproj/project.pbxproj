@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		608F711B63A028D0EF193D65 /* libPods-iOSProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215A68B79D16D630EC172349 /* libPods-iOSProjectTests.a */; };
+		D70E0F321B3C6F620060F3C7 /* IDPStatefuImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D70E0F311B3C6F620060F3C7 /* IDPStatefuImageView.m */; };
 		D768B0AE1B31F16E00C8698C /* IDPTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D768B0AD1B31F16E00C8698C /* IDPTestView.xib */; };
 		D768B0B11B31F1F100C8698C /* IDPTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = D768B0B01B31F1F100C8698C /* IDPTestView.m */; };
 		D77D122E1B39D0D600BE4E9C /* IDPDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = D77D122D1B39D0D600BE4E9C /* IDPDisplayLink.m */; };
@@ -62,6 +63,8 @@
 		215A68B79D16D630EC172349 /* libPods-iOSProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4663880D419D8234376BCC9E /* Pods-iOSProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectTests/Pods-iOSProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		C208A979779DDE06A581FFA2 /* Pods-iOSProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectTests/Pods-iOSProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D70E0F301B3C6F620060F3C7 /* IDPStatefuImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPStatefuImageView.h; sourceTree = "<group>"; };
+		D70E0F311B3C6F620060F3C7 /* IDPStatefuImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPStatefuImageView.m; sourceTree = "<group>"; };
 		D768B0AD1B31F16E00C8698C /* IDPTestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPTestView.xib; sourceTree = "<group>"; };
 		D768B0AF1B31F1F100C8698C /* IDPTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPTestView.h; sourceTree = "<group>"; };
 		D768B0B01B31F1F100C8698C /* IDPTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPTestView.m; sourceTree = "<group>"; };
@@ -368,6 +371,8 @@
 				D7E717EF1B3B064200F8E9FD /* Private */,
 				D7E39A291B31E063005C269F /* IDPImageView.h */,
 				D7E39A2A1B31E063005C269F /* IDPImageView.m */,
+				D70E0F301B3C6F620060F3C7 /* IDPStatefuImageView.h */,
+				D70E0F311B3C6F620060F3C7 /* IDPStatefuImageView.m */,
 			);
 			path = IDPImageView;
 			sourceTree = "<group>";
@@ -644,6 +649,7 @@
 				D7E39A2B1B31E063005C269F /* IDPImageView.m in Sources */,
 				D7E0B8501B29EEA60046EDBA /* NSString+IDPExtensions.m in Sources */,
 				D7E0B83E1B29ED2F0046EDBA /* IDPUserViewController.m in Sources */,
+				D70E0F321B3C6F620060F3C7 /* IDPStatefuImageView.m in Sources */,
 				D7E0B83C1B29ED2F0046EDBA /* IDPUser.m in Sources */,
 				D7E6A2E81B2F35C9002E5407 /* IDPTableViewCell.m in Sources */,
 				D7E0B8481B29EE290046EDBA /* IDPUsersView.m in Sources */,

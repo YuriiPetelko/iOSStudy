@@ -27,7 +27,6 @@
     
     operation.contentSetter = ^(IDPImageView *view, UIImage *content) {
         view.contentImageView.image = content;
-        [view setNeedsDisplay];
     };
     
     return operation;

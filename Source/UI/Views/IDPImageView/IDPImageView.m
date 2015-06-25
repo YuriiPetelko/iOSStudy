@@ -95,9 +95,12 @@
 }
 
 #pragma mark -
-#pragma mark View Lifecycle
+#pragma mark Public
 
-
+- (void)modelDidLoad:(IDPImageModel *)model {
+    id operation = [IDPViewContentOperation operationWithImageView:self imageModel:model];
+    [[IDPViewContentDispatcher sharedObject] addViewContentOperation:operation];
+}
 
 #pragma mark -
 #pragma mark Private
@@ -108,9 +111,7 @@
         IDPStrongifyAndReturnIfNil(self);
         
         IDPImageModel *model = controller.observableObject;
-        
-        id operation = [IDPViewContentOperation operationWithImageView:self imageModel:model];
-        [[IDPViewContentDispatcher sharedObject] addViewContentOperation:operation];
+        [self modelDidLoad:model];
     };
     
     [observer setHandler:handler forState:IDPImageModelLoaded];
