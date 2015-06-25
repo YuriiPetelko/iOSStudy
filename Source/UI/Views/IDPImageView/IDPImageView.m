@@ -10,6 +10,9 @@
 
 #import "IDPImageModel.h"
 #import "IDPBlockObservationController.h"
+#import "IDPViewContentDispatcher.h"
+
+#import "IDPViewContentOperation+IDPImageView.h"
 
 #import "IDPMacro.h"
 
@@ -74,17 +77,12 @@
         [_imageModel dump];
         _imageModel = imageModel;
         
-        self.observer = [imageModel blockObservationControllerWithObserver:self];
-        
-        IDPWeakify(self);
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)),
-                       dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0),
-                       ^{
-                           IDPStrongifyAndReturnIfNil(self);
-                           if (self.imageModel == imageModel) {
-                               [imageModel load];
-                           }
-                       });
+        if (imageModel) {
+            self.observer = [imageModel blockObservationControllerWithObserver:self];
+            [imageModel load];
+        } else {
+            self.contentImageView.image = nil;
+        }
     }
 }
 
@@ -107,18 +105,12 @@
 - (void)prepareObserver:(IDPBlockObservationController *)observer {
     IDPWeakify(self);
     id handler = ^(IDPBlockObservationController *controller, id userInfo) {
-        void(^block)(void) = ^{
-            IDPStrongifyAndReturnIfNil(self);
-            
-            IDPImageModel *model = controller.observableObject;
-            self.contentImageView.image = model.image;
-        };
+        IDPStrongifyAndReturnIfNil(self);
         
-        if ([NSThread isMainThread]) {
-            block();
-        } else {
-            dispatch_sync(dispatch_get_main_queue(), block);
-        }
+        IDPImageModel *model = controller.observableObject;
+        
+        id operation = [IDPViewContentOperation operationWithImageView:self imageModel:model];
+        [[IDPViewContentDispatcher sharedObject] addViewContentOperation:operation];
     };
     
     [observer setHandler:handler forState:IDPImageModelLoaded];

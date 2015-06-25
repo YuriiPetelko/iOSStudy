@@ -11,8 +11,10 @@
 @interface IDPFrameInfo : NSObject
 @property (nonatomic, readonly) NSTimeInterval  duration;
 @property (nonatomic, readonly) CFTimeInterval  timeStamp;
+@property (nonatomic, readonly) NSUInteger      frameCount;
 
 - (instancetype)initWithDuration:(NSTimeInterval)duration
-                       timeStamp:(CFTimeInterval)timeStamp;
+                       timeStamp:(CFTimeInterval)timeStamp
+                      frameCount:(NSUInteger)frameCount;
 
 @end

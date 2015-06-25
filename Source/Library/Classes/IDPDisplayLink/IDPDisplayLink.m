@@ -18,6 +18,7 @@ static NSInteger const kIDPDisplayLinkDefaultTimeInterval   = 1;
 @interface IDPDisplayLink ()
 @property (nonatomic, strong)   CADisplayLink   *displayLink;
 @property (nonatomic, assign)   NSUInteger      frameInterval;
+@property (nonatomic, assign)   NSUInteger      frameCount;
 
 - (void)initDisplayLink;
 
@@ -72,7 +73,7 @@ static NSInteger const kIDPDisplayLinkDefaultTimeInterval   = 1;
         
         displayLink.frameInterval = self.frameInterval;
         [displayLink addToRunLoop:[NSRunLoop mainRunLoop]
-                          forMode:NSDefaultRunLoopMode];
+                          forMode:NSRunLoopCommonModes];
     }
 }
 
@@ -81,9 +82,12 @@ static NSInteger const kIDPDisplayLinkDefaultTimeInterval   = 1;
 
 - (void)onDisplayLink:(CADisplayLink *)link {
     IDPFrameInfo *info = [[IDPFrameInfo alloc] initWithDuration:link.duration
-                                                      timeStamp:link.timestamp];
+                                                      timeStamp:link.timestamp
+                                                     frameCount:self.frameCount];
     
-    [self setState:IDPDisplayLinkFrameRefresh withObject:info];
+    self.frameCount += 1;
+    
+    [self notifyOfStateChange:IDPDisplayLinkFrameRefresh withObject:info];
 }
 
 @end

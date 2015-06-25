@@ -43,6 +43,9 @@
 		D7E6A2EC1B2F37B8002E5407 /* IDPUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6A2EB1B2F37B8002E5407 /* IDPUserCell.m */; };
 		D7E6A2EE1B2F37DA002E5407 /* IDPUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E6A2ED1B2F37DA002E5407 /* IDPUserCell.xib */; };
 		D7E6A2F11B2F438C002E5407 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7E6A2F01B2F438C002E5407 /* image.jpg */; };
+		D7E717F51B3B0A9500F8E9FD /* IDPViewContentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E717F41B3B0A9500F8E9FD /* IDPViewContentOperation.m */; };
+		D7E717F81B3B1B6300F8E9FD /* IDPViewContentDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E717F71B3B1B6300F8E9FD /* IDPViewContentDispatcher.m */; };
+		D7E717FB1B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E717FA1B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +124,12 @@
 		D7E6A2EB1B2F37B8002E5407 /* IDPUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPUserCell.m; sourceTree = "<group>"; };
 		D7E6A2ED1B2F37DA002E5407 /* IDPUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IDPUserCell.xib; sourceTree = "<group>"; };
 		D7E6A2F01B2F438C002E5407 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		D7E717F31B3B0A9500F8E9FD /* IDPViewContentOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPViewContentOperation.h; sourceTree = "<group>"; };
+		D7E717F41B3B0A9500F8E9FD /* IDPViewContentOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPViewContentOperation.m; sourceTree = "<group>"; };
+		D7E717F61B3B1B6300F8E9FD /* IDPViewContentDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPViewContentDispatcher.h; sourceTree = "<group>"; };
+		D7E717F71B3B1B6300F8E9FD /* IDPViewContentDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPViewContentDispatcher.m; sourceTree = "<group>"; };
+		D7E717F91B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDPViewContentOperation+IDPImageView.h"; sourceTree = "<group>"; };
+		D7E717FA1B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDPViewContentOperation+IDPImageView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +365,7 @@
 		D7E39A281B31E020005C269F /* IDPImageView */ = {
 			isa = PBXGroup;
 			children = (
+				D7E717EF1B3B064200F8E9FD /* Private */,
 				D7E39A291B31E063005C269F /* IDPImageView.h */,
 				D7E39A2A1B31E063005C269F /* IDPImageView.m */,
 			);
@@ -450,6 +460,19 @@
 				D7E6A2F01B2F438C002E5407 /* image.jpg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		D7E717EF1B3B064200F8E9FD /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				D7E717F31B3B0A9500F8E9FD /* IDPViewContentOperation.h */,
+				D7E717F41B3B0A9500F8E9FD /* IDPViewContentOperation.m */,
+				D7E717F61B3B1B6300F8E9FD /* IDPViewContentDispatcher.h */,
+				D7E717F71B3B1B6300F8E9FD /* IDPViewContentDispatcher.m */,
+				D7E717F91B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.h */,
+				D7E717FA1B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		EE802584EC48D7EB0F244285 /* Pods */ = {
@@ -614,7 +637,9 @@
 				D7E0B8571B29F0230046EDBA /* IDPMacro.m in Sources */,
 				D7E488571B308DC700DC9045 /* IDPObservableObject.m in Sources */,
 				D77D12311B39D33600BE4E9C /* IDPFrameInfo.m in Sources */,
+				D7E717FB1B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.m in Sources */,
 				D7E0B83D1B29ED2F0046EDBA /* IDPUserView.m in Sources */,
+				D7E717F81B3B1B6300F8E9FD /* IDPViewContentDispatcher.m in Sources */,
 				D7E6A2EC1B2F37B8002E5407 /* IDPUserCell.m in Sources */,
 				D7E39A2B1B31E063005C269F /* IDPImageView.m in Sources */,
 				D7E0B8501B29EEA60046EDBA /* NSString+IDPExtensions.m in Sources */,
@@ -622,6 +647,7 @@
 				D7E0B83C1B29ED2F0046EDBA /* IDPUser.m in Sources */,
 				D7E6A2E81B2F35C9002E5407 /* IDPTableViewCell.m in Sources */,
 				D7E0B8481B29EE290046EDBA /* IDPUsersView.m in Sources */,
+				D7E717F51B3B0A9500F8E9FD /* IDPViewContentOperation.m in Sources */,
 				D7E17BFD1B25FCAA009773BB /* main.m in Sources */,
 				D7E1E09A1B274251000DC582 /* IDPAppDelegate.m in Sources */,
 			);
@@ -747,6 +773,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = iOSProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -758,6 +785,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = iOSProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
