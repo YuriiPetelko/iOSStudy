@@ -7,46 +7,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vHP-f2-LCA" customClass="IDPUserCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="507" id="vHP-f2-LCA" customClass="IDPUserCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vHP-f2-LCA" id="BTr-IU-lra">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d8p-Zf-T9g">
-                        <rect key="frame" x="81" y="0.0" width="239" height="43"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <view contentMode="scaleToFill" id="EVC-fp-GJI" customClass="IDPStatefuImageView">
-                        <rect key="frame" x="8" y="0.0" width="65" height="43"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9tQ-0D-ToG">
-                                <rect key="frame" x="0.0" y="0.0" width="65" height="43"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="IMs-hc-g4y">
-                                <rect key="frame" x="22" y="12" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                        </subviews>
+                    <view contentMode="scaleToFill" id="uOY-Td-q1y" customClass="IDPUserImageView">
+                        <rect key="frame" x="23" y="112" width="275" height="275"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="activityIndicator" destination="IMs-hc-g4y" id="0qn-VL-nRb"/>
-                            <outlet property="contentImageView" destination="9tQ-0D-ToG" id="qAx-U2-sBe"/>
-                        </connections>
                     </view>
                 </subviews>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="fullNameLabel" destination="d8p-Zf-T9g" id="cGz-QX-uRn"/>
-                <outlet property="userImageView" destination="EVC-fp-GJI" id="e8s-f5-joh"/>
-            </connections>
-            <point key="canvasLocation" x="289" y="370"/>
+            <point key="canvasLocation" x="289" y="601.5"/>
         </tableViewCell>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

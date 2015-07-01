@@ -47,6 +47,7 @@
 		D7E717F51B3B0A9500F8E9FD /* IDPViewContentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E717F41B3B0A9500F8E9FD /* IDPViewContentOperation.m */; };
 		D7E717F81B3B1B6300F8E9FD /* IDPViewContentDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E717F71B3B1B6300F8E9FD /* IDPViewContentDispatcher.m */; };
 		D7E717FB1B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E717FA1B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.m */; };
+		D7FD49AE1B41BA6E0098FE6C /* IDPUserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FD49AD1B41BA6E0098FE6C /* IDPUserImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,8 @@
 		D7E717F71B3B1B6300F8E9FD /* IDPViewContentDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPViewContentDispatcher.m; sourceTree = "<group>"; };
 		D7E717F91B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDPViewContentOperation+IDPImageView.h"; sourceTree = "<group>"; };
 		D7E717FA1B3B207000F8E9FD /* IDPViewContentOperation+IDPImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDPViewContentOperation+IDPImageView.m"; sourceTree = "<group>"; };
+		D7FD49AC1B41BA6E0098FE6C /* IDPUserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPUserImageView.h; sourceTree = "<group>"; };
+		D7FD49AD1B41BA6E0098FE6C /* IDPUserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPUserImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +376,8 @@
 				D7E39A2A1B31E063005C269F /* IDPImageView.m */,
 				D70E0F301B3C6F620060F3C7 /* IDPStatefuImageView.h */,
 				D70E0F311B3C6F620060F3C7 /* IDPStatefuImageView.m */,
+				D7FD49AC1B41BA6E0098FE6C /* IDPUserImageView.h */,
+				D7FD49AD1B41BA6E0098FE6C /* IDPUserImageView.m */,
 			);
 			path = IDPImageView;
 			sourceTree = "<group>";
@@ -654,6 +659,7 @@
 				D7E6A2E81B2F35C9002E5407 /* IDPTableViewCell.m in Sources */,
 				D7E0B8481B29EE290046EDBA /* IDPUsersView.m in Sources */,
 				D7E717F51B3B0A9500F8E9FD /* IDPViewContentOperation.m in Sources */,
+				D7FD49AE1B41BA6E0098FE6C /* IDPUserImageView.m in Sources */,
 				D7E17BFD1B25FCAA009773BB /* main.m in Sources */,
 				D7E1E09A1B274251000DC582 /* IDPAppDelegate.m in Sources */,
 			);
