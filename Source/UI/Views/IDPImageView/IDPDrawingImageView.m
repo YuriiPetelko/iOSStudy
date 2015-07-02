@@ -1,5 +1,5 @@
 //
-//  IDPUserImageView.m
+//  IDPDrawingImageView.m
 //  iOSProject
 //
 //  Created by Oleksa Korin on 6/29/15.
@@ -8,9 +8,9 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-#import "IDPUserImageView.h"
+#import "IDPDrawingImageView.h"
 
-@interface IDPUserImageView ()
+@interface IDPDrawingImageView ()
 
 - (void)drawImproperGradientLineInContext:(CGContextRef)context;
 - (void)drawPathGradientLineInContext:(CGContextRef)context;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation IDPUserImageView
+@implementation IDPDrawingImageView
 
 #pragma mark -
 #pragma mark Initializations and Deallocations

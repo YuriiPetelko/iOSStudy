@@ -13,11 +13,10 @@
 #import "IDPMacro.h"
 
 @interface IDPImageModel ()
-@property (nonatomic, strong)       UIImage     *image;
 @property (nonatomic, strong)       NSURL       *url;
 @property (nonatomic, strong)       NSOperation *operation;
 
-- (NSOperation *)imageLoadingOperation;
+- (NSOperation *)setupOperation:(NSOperation *)operation;
 
 @end
 
@@ -80,7 +79,7 @@
         self.state = IDPImageModelLoading;
     }
     
-    self.operation = [self imageLoadingOperation];
+    self.operation = [self setupOperation:[self imageLoadingOperation]];
 }
 
 - (void)dump {
@@ -89,21 +88,31 @@
     self.state = IDPImageModelUnloaded;
 }
 
-#pragma mark -
-#pragma mark Private
-
 - (NSOperation *)imageLoadingOperation {
     IDPWeakify(self);
     
     NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
         IDPStrongifyAndReturnIfNil(self);
         self.image = [UIImage imageWithContentsOfFile:[self.url path]];
-        NSLog(@"");
     }];
+  
+    return operation;
+}
+
+#pragma mark -
+#pragma mark Private
+
+- (NSOperation *)setupOperation:(NSOperation *)operation {
+    IDPWeakify(self);
     
+    void(^completion)(void) = operation.completionBlock;
     operation.completionBlock = ^{
         IDPStrongify(self);
         @synchronized (self) {
+            if (completion) {
+                completion();
+            }
+            
             self.state = self.image ? IDPImageModelLoaded : IDPImageModelFailedLoading;
         }
     };

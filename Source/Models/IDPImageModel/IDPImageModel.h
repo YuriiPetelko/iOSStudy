@@ -18,8 +18,8 @@ typedef NS_ENUM(NSUInteger, IDPImageModelState) {
 };
 
 @interface IDPImageModel : IDPObservableObject
-@property (nonatomic, readonly)    UIImage  *image;
-@property (nonatomic, readonly)    NSURL    *url;
+@property (nonatomic, strong)   UIImage  *image;
+@property (nonatomic, readonly) NSURL    *url;
 
 + (instancetype)imageWithURL:(NSURL *)url;
 
@@ -27,5 +27,9 @@ typedef NS_ENUM(NSUInteger, IDPImageModelState) {
 
 - (void)load;
 - (void)dump;
+
+// this method is intended for suclassing purposes only
+// you should never call it directly
+- (NSOperation *)imageLoadingOperation;
 
 @end

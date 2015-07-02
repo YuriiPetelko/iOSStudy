@@ -1,5 +1,5 @@
 //
-//  IDPUserImageView.h
+//  IDPDrawingImageView.h
 //  iOSProject
 //
 //  Created by Oleksa Korin on 6/29/15.
@@ -8,6 +8,6 @@
 
 #import "IDPStatefuImageView.h"
 
-@interface IDPUserImageView : IDPStatefuImageView
+@interface IDPDrawingImageView : IDPStatefuImageView
 
 @end
