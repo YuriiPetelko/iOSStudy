@@ -12,6 +12,8 @@
 
 #import "IDPImageView.h"
 
+#import "IDPUserCellBackgroundImage.h"
+
 @implementation IDPUserCell
 
 #pragma mark -
@@ -28,6 +30,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.backgroundImageView.imageModel = [IDPUserCellBackgroundImage imageWithSize:self.bounds.size];
 }
 
 #pragma mark -

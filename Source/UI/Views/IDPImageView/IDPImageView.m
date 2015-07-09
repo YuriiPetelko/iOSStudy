@@ -57,6 +57,8 @@
                                     | UIViewAutoresizingFlexibleTopMargin
                                     | UIViewAutoresizingFlexibleHeight
                                     | UIViewAutoresizingFlexibleBottomMargin;
+    imageView.backgroundColor = [UIColor clearColor];
+    imageView.opaque = NO;
     
     self.contentImageView = imageView;
 }
