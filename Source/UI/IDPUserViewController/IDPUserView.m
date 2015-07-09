@@ -32,8 +32,4 @@
     self.label.text = user.fullName;
 }
 
-- (void)rotateLabel {
-    self.label.transform = CGAffineTransformMakeRotation((float)arc4random() / UINT32_MAX * 2 * M_PI);
-}
-
 @end
