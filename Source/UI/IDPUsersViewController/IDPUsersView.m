@@ -10,6 +10,10 @@
 
 @implementation IDPUsersView
 
-
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+//    self.tableView.scrollsToTop = NO;
+}
 
 @end

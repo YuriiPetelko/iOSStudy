@@ -22,9 +22,20 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oZQ-t8-1Ru">
+                    <rect key="frame" x="91" y="8" width="139" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Dismiss">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onDismiss:" destination="-1" eventType="touchUpInside" id="C8o-Ij-2Ac"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="dismissButton" destination="oZQ-t8-1Ru" id="AZc-Wf-LLO"/>
                 <outlet property="label" destination="0va-ba-HMc" id="LDp-yl-dWy"/>
             </connections>
             <point key="canvasLocation" x="513" y="312"/>

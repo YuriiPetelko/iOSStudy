@@ -8,6 +8,8 @@
 
 #import "IDPUsersViewController.h"
 
+#import "IDPUserViewController.h"
+
 #import "IDPUser.h"
 #import "IDPUsersView.h"
 #import "IDPUserCell.h"
@@ -28,6 +30,8 @@ IDPViewControllerBaseViewProperty(IDPUsersViewController, usersView, IDPUsersVie
     [super viewDidLoad];
     
     [self.usersView.tableView reloadData];
+    
+    self.title = @"Users";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,5 +70,49 @@ IDPViewControllerBaseViewProperty(IDPUsersViewController, usersView, IDPUsersVie
 {
     cell.user = nil;
 }
+
+- (void)        tableView:(UITableView *)tableView
+  didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    IDPUserCell *cell = (IDPUserCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    IDPUser *user = cell.user;
+    
+    IDPUserViewController *controller = [IDPUserViewController new];
+    controller.user = user;
+
+    [self.navigationController pushViewController:controller animated:YES];
+//    [self presentViewController:controller animated:YES completion:nil];
+}
+
+#define IDPOutputMethod NSLog(@"%@", NSStringFromSelector(_cmd));
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    IDPOutputMethodWithScrollView
+//}
+//
+//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+//    IDPOutputMethodWithScrollView
+//}
+//
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+//    IDPOutputMethodWithScrollView
+//}
+//
+//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+//    IDPOutputMethodWithScrollView
+//}
+//
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    IDPOutputMethodWithScrollView
+//}
+//
+//- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+//    IDPOutputMethodWithScrollView
+//}
+//
+//- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+//    IDPOutputMethodWithScrollView
+//}
 
 @end

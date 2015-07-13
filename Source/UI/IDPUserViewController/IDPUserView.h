@@ -12,6 +12,7 @@
 
 @interface IDPUserView : UIView
 @property (nonatomic, strong)   IBOutlet UILabel            *label;
+@property (nonatomic, strong)   IBOutlet UIButton           *dismissButton;
 @property (nonatomic, strong)   IDPUser                     *user;
 
 - (void)fillWithUser:(IDPUser *)user;

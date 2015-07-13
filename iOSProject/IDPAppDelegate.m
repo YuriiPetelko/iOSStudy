@@ -24,8 +24,10 @@
     
     IDPUsersViewController *controller = [IDPUsersViewController new];
     controller.user = [IDPUser new];
+
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
     
-    window.rootViewController = controller;
+    window.rootViewController = navigationController;
     window.backgroundColor = [UIColor greenColor];
     
     [window makeKeyAndVisible];

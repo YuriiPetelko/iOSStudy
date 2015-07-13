@@ -13,4 +13,6 @@
 @interface IDPUserViewController : UIViewController
 @property (nonatomic, strong)   IDPUser    *user;
 
+- (IBAction)onDismiss:(id)sender;
+
 @end

@@ -9,6 +9,7 @@
 #import "IDPUserViewController.h"
 
 #import "IDPUserView.h"
+#import "IDPUser.h"
 
 #import "IDPMacro.h"
 
@@ -22,6 +23,8 @@ IDPViewControllerBaseViewProperty(IDPUserViewController, userView, IDPUserView)
 - (void)setUser:(IDPUser *)user {
     if (_user != user) {
         _user = user;
+        
+        self.title = user.fullName;
     }
     
     self.userView.user = user;
@@ -43,5 +46,9 @@ IDPViewControllerBaseViewProperty(IDPUserViewController, userView, IDPUserView)
 
 #pragma mark -
 #pragma mark Interface Handling
+
+- (IBAction)onDismiss:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
