@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DBImage" representedClassName="DBImage" syncable="YES">
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBUser" inverseName="images" inverseEntity="DBUser" syncable="YES"/>
+    </entity>
+    <entity name="DBUser" representedClassName="DBUser" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="married" optional="YES" attributeType="Boolean" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBUser" inverseName="friends" inverseEntity="DBUser" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBImage" inverseName="user" inverseEntity="DBImage" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DBUser" positionX="-342" positionY="-78" width="128" height="133"/>
+        <element name="DBImage" positionX="-54" positionY="-9" width="128" height="75"/>
+    </elements>
+</model>

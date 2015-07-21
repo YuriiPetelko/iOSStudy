@@ -86,6 +86,9 @@
 		D7EC180B1B5EB1A80041F14A /* IDPMath.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EC17E01B5EB1A80041F14A /* IDPMath.m */; };
 		D7EC180C1B5EB1A80041F14A /* IDPObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EC17E31B5EB1A80041F14A /* IDPObjCRuntime.m */; };
 		D7EC180D1B5EB1A80041F14A /* IDPTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EC17E61B5EB1A80041F14A /* IDPTypes.m */; };
+		D7EC18121B5EB9B60041F14A /* iOSProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7EC18101B5EB9B60041F14A /* iOSProject.xcdatamodeld */; };
+		D7EC18211B5EC0C20041F14A /* DBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EC18201B5EC0C20041F14A /* DBUser.m */; };
+		D7EC18241B5EC0C30041F14A /* DBImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EC18231B5EC0C30041F14A /* DBImage.m */; };
 		D7F4280D1B44555E0084322D /* IDPUserCellBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F4280C1B44555E0084322D /* IDPUserCellBackgroundImage.m */; };
 		D7FD49AE1B41BA6E0098FE6C /* IDPDrawingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FD49AD1B41BA6E0098FE6C /* IDPDrawingImageView.m */; };
 /* End PBXBuildFile section */
@@ -256,6 +259,11 @@
 		D7EC17E61B5EB1A80041F14A /* IDPTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPTypes.m; sourceTree = "<group>"; };
 		D7EC17E71B5EB1A80041F14A /* IDPUtilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPUtilityMacros.h; sourceTree = "<group>"; };
 		D7EC180E1B5EB7A60041F14A /* iOSProject-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOSProject-prefix.pch"; sourceTree = "<group>"; };
+		D7EC18111B5EB9B60041F14A /* iOSProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSProject.xcdatamodel; sourceTree = "<group>"; };
+		D7EC181F1B5EC0C20041F14A /* DBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUser.h; sourceTree = "<group>"; };
+		D7EC18201B5EC0C20041F14A /* DBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUser.m; sourceTree = "<group>"; };
+		D7EC18221B5EC0C30041F14A /* DBImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBImage.h; sourceTree = "<group>"; };
+		D7EC18231B5EC0C30041F14A /* DBImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBImage.m; sourceTree = "<group>"; };
 		D7F4280B1B44555E0084322D /* IDPUserCellBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPUserCellBackgroundImage.h; sourceTree = "<group>"; };
 		D7F4280C1B44555E0084322D /* IDPUserCellBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPUserCellBackgroundImage.m; sourceTree = "<group>"; };
 		D7FD49AC1B41BA6E0098FE6C /* IDPDrawingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPDrawingImageView.h; sourceTree = "<group>"; };
@@ -323,6 +331,7 @@
 		D7E0B82F1B29ED2F0046EDBA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D7EC180F1B5EB9870041F14A /* Core Data */,
 				D7E488421B308ACF00DC9045 /* IDPImageModel */,
 				D7E0B8301B29ED2F0046EDBA /* IDPUser */,
 			);
@@ -940,6 +949,18 @@
 			path = IDPTypes;
 			sourceTree = "<group>";
 		};
+		D7EC180F1B5EB9870041F14A /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				D7EC18101B5EB9B60041F14A /* iOSProject.xcdatamodeld */,
+				D7EC18221B5EC0C30041F14A /* DBImage.h */,
+				D7EC18231B5EC0C30041F14A /* DBImage.m */,
+				D7EC181F1B5EC0C20041F14A /* DBUser.h */,
+				D7EC18201B5EC0C20041F14A /* DBUser.m */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		D7F4280A1B44551D0084322D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -1132,6 +1153,7 @@
 				D7EC17FE1B5EB1A80041F14A /* IDPMutableDictionary.m in Sources */,
 				D7EC18091B5EB1A80041F14A /* IDPWeakArray.m in Sources */,
 				D7E0B83D1B29ED2F0046EDBA /* IDPUserView.m in Sources */,
+				D7EC18211B5EC0C20041F14A /* DBUser.m in Sources */,
 				D7EC17F41B5EB1A80041F14A /* IDPKVOContext.m in Sources */,
 				D7EC17F61B5EB1A80041F14A /* IDPMixinContext.m in Sources */,
 				D7EC17FA1B5EB1A80041F14A /* NSObject+IDPMixin.m in Sources */,
@@ -1155,9 +1177,11 @@
 				D7EC18031B5EB1A80041F14A /* IDPStrongReference.m in Sources */,
 				D7E0B8481B29EE290046EDBA /* IDPUsersView.m in Sources */,
 				D7EC17781B5EB0960041F14A /* NSManagedObjectContext+IDPExtensions.m in Sources */,
+				D7EC18121B5EB9B60041F14A /* iOSProject.xcdatamodeld in Sources */,
 				D7EC17E91B5EB1A80041F14A /* NSDate+IDPExtensions.m in Sources */,
 				D7EC17F51B5EB1A80041F14A /* IDPKVOMutableArray.m in Sources */,
 				D7E717F51B3B0A9500F8E9FD /* IDPViewContentOperation.m in Sources */,
+				D7EC18241B5EC0C30041F14A /* DBImage.m in Sources */,
 				D7FD49AE1B41BA6E0098FE6C /* IDPDrawingImageView.m in Sources */,
 				D7F4280D1B44555E0084322D /* IDPUserCellBackgroundImage.m in Sources */,
 				D7E17BFD1B25FCAA009773BB /* main.m in Sources */,
@@ -1374,6 +1398,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D7EC18101B5EB9B60041F14A /* iOSProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D7EC18111B5EB9B60041F14A /* iOSProject.xcdatamodel */,
+			);
+			currentVersion = D7EC18111B5EB9B60041F14A /* iOSProject.xcdatamodel */;
+			path = iOSProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D7E17BC81B25FACD009773BB /* Project object */;
 }
