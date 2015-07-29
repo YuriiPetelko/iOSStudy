@@ -24,6 +24,13 @@
 @dynamic friends;
 
 #pragma mark -
+#pragma mark Lifetime
+
+- (void)awakeFromFetch {
+    [super awakeFromFetch];
+}
+
+#pragma mark -
 #pragma mark Accessors
 
 - (NSString *)fullName {

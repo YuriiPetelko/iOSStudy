@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 IDAP Group. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 @interface NSObject (IDPMixin)
 @property (nonatomic, readonly)     NSArray     *mixins;
 
