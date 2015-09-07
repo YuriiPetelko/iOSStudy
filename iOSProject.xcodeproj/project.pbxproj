@@ -96,6 +96,8 @@
 		D7BC1F5B1B669F160025E40C /* NSManagedObjectID+IDPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC1F541B669F160025E40C /* NSManagedObjectID+IDPExtensions.m */; };
 		D7BC1F5C1B669F160025E40C /* NSManagedObjectID+IDPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC1F541B669F160025E40C /* NSManagedObjectID+IDPExtensions.m */; };
 		D7BC1F5F1B66A07A0025E40C /* IDPActiveRecordSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC1F5E1B66A07A0025E40C /* IDPActiveRecordSpec.m */; };
+		D7CE75F51B6A7AC7009066E1 /* IDPFetchedResultsControllerDelegateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CE75F41B6A7AC7009066E1 /* IDPFetchedResultsControllerDelegateObject.m */; };
+		D7CE75F61B6A80EE009066E1 /* IDPFetchedResultsControllerDelegateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CE75F41B6A7AC7009066E1 /* IDPFetchedResultsControllerDelegateObject.m */; };
 		D7E0B83C1B29ED2F0046EDBA /* IDPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0B8321B29ED2F0046EDBA /* IDPUser.m */; };
 		D7E0B83D1B29ED2F0046EDBA /* IDPUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0B8361B29ED2F0046EDBA /* IDPUserView.m */; };
 		D7E0B83E1B29ED2F0046EDBA /* IDPUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E0B8381B29ED2F0046EDBA /* IDPUserViewController.m */; };
@@ -243,6 +245,8 @@
 		D7BC1F531B669F160025E40C /* NSManagedObjectID+IDPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectID+IDPExtensions.h"; sourceTree = "<group>"; };
 		D7BC1F541B669F160025E40C /* NSManagedObjectID+IDPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectID+IDPExtensions.m"; sourceTree = "<group>"; };
 		D7BC1F5E1B66A07A0025E40C /* IDPActiveRecordSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPActiveRecordSpec.m; sourceTree = "<group>"; };
+		D7CE75F31B6A7AC7009066E1 /* IDPFetchedResultsControllerDelegateObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPFetchedResultsControllerDelegateObject.h; sourceTree = "<group>"; };
+		D7CE75F41B6A7AC7009066E1 /* IDPFetchedResultsControllerDelegateObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPFetchedResultsControllerDelegateObject.m; sourceTree = "<group>"; };
 		D7E0B8311B29ED2F0046EDBA /* IDPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPUser.h; sourceTree = "<group>"; };
 		D7E0B8321B29ED2F0046EDBA /* IDPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPUser.m; sourceTree = "<group>"; };
 		D7E0B8351B29ED2F0046EDBA /* IDPUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPUserView.h; sourceTree = "<group>"; };
@@ -856,6 +860,8 @@
 			children = (
 				D7E17C1D1B25FDB1009773BB /* IDPARCObject.h */,
 				D7E17C1E1B25FDB1009773BB /* IDPARCObject.m */,
+				D7CE75F31B6A7AC7009066E1 /* IDPFetchedResultsControllerDelegateObject.h */,
+				D7CE75F41B6A7AC7009066E1 /* IDPFetchedResultsControllerDelegateObject.m */,
 			);
 			path = "Test Objects";
 			sourceTree = "<group>";
@@ -1184,6 +1190,7 @@
 				D7BC1F3E1B669F0C0025E40C /* IDPThreadSafeProxy.m in Sources */,
 				D7BC1F1A1B669F0C0025E40C /* IDPDispatch.m in Sources */,
 				D7BC1F441B669F0C0025E40C /* IDPMath.m in Sources */,
+				D7CE75F61B6A80EE009066E1 /* IDPFetchedResultsControllerDelegateObject.m in Sources */,
 				D7E4885F1B30993400DC9045 /* IDPImageModelDispatcher.m in Sources */,
 				D7E488561B308DC700DC9045 /* IDPBlockObservationController.m in Sources */,
 				D77D122E1B39D0D600BE4E9C /* IDPDisplayLink.m in Sources */,
@@ -1267,6 +1274,7 @@
 				D7BC1F2F1B669F0C0025E40C /* IDPProxy.m in Sources */,
 				D7BC1F3F1B669F0C0025E40C /* IDPThreadSafeProxy.m in Sources */,
 				D7E17C221B25FF3F009773BB /* IDPARCSpec.m in Sources */,
+				D7CE75F51B6A7AC7009066E1 /* IDPFetchedResultsControllerDelegateObject.m in Sources */,
 				D7BC1F3B1B669F0C0025E40C /* IDPRetainingDictionary.m in Sources */,
 				D7BC1F0F1B669F0C0025E40C /* NSObject+IDPKVO.m in Sources */,
 				D7BC1F561B669F160025E40C /* IDPCoreDataManager.m in Sources */,

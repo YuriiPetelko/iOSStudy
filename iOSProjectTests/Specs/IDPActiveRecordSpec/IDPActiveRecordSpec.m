@@ -11,6 +11,8 @@
 #import "DBUser.h"
 #import "DBImage.h"
 
+#import "IDPFetchedResultsControllerDelegateObject.h"
+
 #import "ActiveRecordKit.h"
 
 #import "NSString+IDPRandomName.h"
@@ -196,6 +198,52 @@ describe(@"DBUser", ^{
                                                                      prefetchPaths:nil];
                 
                 [[usersAfterDelete should] haveCountOf:0];
+            });
+        });
+        
+        context(@"when fetching using NSFetchedResultsController", ^{
+            __block NSFetchedResultsController *controller = nil;
+            __block IDPFetchedResultsControllerDelegateObject *delegate = nil;
+            
+            beforeAll(^{
+                createUsers();
+                delegate = [IDPFetchedResultsControllerDelegateObject new];
+                
+                [NSManagedObjectContext saveManagedObjectContext];
+                
+                NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([DBUser class])];
+                request.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]];
+                
+                NSManagedObjectContext *context = [[NSManagedObjectContext alloc] init];
+                context.persistentStoreCoordinator = [[IDPCoreDataManager sharedManager] persistentStoreCoordinator];
+                
+                controller = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                 managedObjectContext:context
+                                                                   sectionNameKeyPath:nil
+                                                                            cacheName:nil];
+                
+                controller.delegate = delegate;
+                
+                NSError *error = nil;
+                [controller performFetch:&error];
+                NSLog(@"%@", error);
+            });
+            
+            it(@"controller should contain entityCount users", ^{
+                [[controller.fetchedObjects should] haveCountOf:entityCount];
+            });
+            
+            it(@"controller should notify, when object is changed", ^{
+                DBUser *user = [controller.fetchedObjects firstObject];
+                
+                user.name = @"Manchester";
+                user.surname = @"Jewbacca";
+                user.age = 500;
+                user.married = NO;
+                
+                [user saveManagedObject];
+                
+                [[delegate.user shouldNotEventually] beNil];
             });
         });
     });

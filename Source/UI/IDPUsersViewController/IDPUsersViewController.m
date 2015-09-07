@@ -8,7 +8,12 @@
 
 #import "IDPUsersViewController.h"
 
+#import "ActiveRecordKit.h"
+
 #import "IDPUserViewController.h"
+
+#import "DBUser.h"
+#import "IDPFetchedResultsControllerDelegateObject.h"
 
 #import "IDPUser.h"
 #import "IDPUsersView.h"
@@ -16,7 +21,15 @@
 
 #import "IDPMacro.h"
 
+#import "NSString+IDPRandomName.h"
+
 IDPViewControllerBaseViewProperty(IDPUsersViewController, usersView, IDPUsersView)
+
+@interface IDPUsersViewController ()
+@property (nonatomic, strong)   NSFetchedResultsController  *controller;
+@property (nonatomic, strong)   IDPFetchedResultsControllerDelegateObject   *delegate;
+
+@end
 
 @implementation IDPUsersViewController
 
@@ -32,6 +45,53 @@ IDPViewControllerBaseViewProperty(IDPUsersViewController, usersView, IDPUsersVie
     [self.usersView.tableView reloadData];
     
     self.title = @"Users";
+    
+    [IDPCoreDataManager sharedManagerWithMomName:@"iOSProject"];
+    
+    for (NSUInteger index = 0; index < 10; index++) {
+        DBUser *user = [DBUser managedObject];
+        user.name = [NSString randomName];
+        user.surname = [NSString randomName];
+        user.age = arc4random_uniform(100);
+        user.married = arc4random_uniform(2);
+    }
+    
+    [NSManagedObjectContext saveManagedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([DBUser class])];
+    request.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]];
+    
+    NSManagedObjectContext *context = [[IDPCoreDataManager sharedManager] managedObjectContext];
+    
+    NSFetchedResultsController *controller = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                                 managedObjectContext:context
+                                                                                   sectionNameKeyPath:nil
+                                                                                            cacheName:nil];
+    self.controller = controller;
+    
+    IDPFetchedResultsControllerDelegateObject *delegate = [IDPFetchedResultsControllerDelegateObject new];
+    controller.delegate = delegate;
+    self.delegate = delegate;
+    
+    NSError *error = nil;
+    [controller performFetch:&error];
+    NSLog(@"%@", error);
+    
+    DBUser *user = [controller.fetchedObjects firstObject];
+    
+    user.surname = @"Jewbacca";
+    user.age = 500;
+    user.married = NO;
+    [context save:nil];
+    
+    user.name = @"Manchester";
+    [context save:nil];
+    
+    [context deleteObject:user];
+    [context save:nil];
+
+    user = [DBUser managedObject];
+    [user saveManagedObject];
 }
 
 - (void)didReceiveMemoryWarning {
